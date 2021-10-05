@@ -24,4 +24,19 @@ These are dedicated status check-ins as this is a multi-week project
 - 
 ### Check-in 4
 - 
+
+What are the characteristics of the card? 
+- Banner at the top 
+- two different sets/levels of text 
+- icon 
+- different colors and fonts 
+What design considerations must we take into account? 
+- font sizes and colors 
+- layout/format  
+- sizing each section (banner, etc) 
+What accessability concerns do we have? 
+- that you tab through it 
+- hard for users to tell what to click on 
+- color contrasts 
+What security concerns do we potentially have? 
 - 
