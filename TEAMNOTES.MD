@@ -14,8 +14,11 @@ These are notes to be maintained PER date that you meet. What you did and what t
 ## Status check ins
 These are dedicated status check-ins as this is a multi-week project
 ### Check-in 1
-- 
-- 
+- Four elements: <Header>, <Body>, <Banner>, Simple-Icon 
+- The header element will have a main title. We will have to deal with different fonts and styles to make it look professional 
+- the body will just have to have good content and simple hover states to potential links and maybe inverted colors/ dark mode
+- our banner should be styled nicely and look very professional
+- our icon should pertain to what our professional card is. it can have a hoover function or be linked to something of use. 
 ### Check-in 2
 - 
 - 
@@ -57,6 +60,12 @@ Do we have room for additional reuseable atoms to be produced? (4 by count)
 - icon 
 - banner 
 - body 
-- header/banner
+- header
 what should we call each of them?
 - g1-[name]
+
+NEXT STEPS: 
+- We have one teammate assigned to one element. Hailey is assigned to the Simple-Icon, Frank is assigned to the header, Mike is assigned to the body, and Karina is assigned to the Banner. 
+- we met once this week to talk about the project and talk about the best way to go out about working on this assignment. 
+- we plan to meet again next week to talk about dificulties and potential solutions. 
+  
