@@ -19,6 +19,19 @@ These are dedicated status check-ins as this is a multi-week project
 - the body will just have to have good content and simple hover states to potential links and maybe inverted colors/ dark mode
 - our banner should be styled nicely and look very professional
 - our icon should pertain to what our professional card is. it can have a hoover function or be linked to something of use. 
+  
+### Class Participation week 8 (10/14)
+What did you take away from the portion of class about implementing SimpleColors?
+  - Instead of having to make our own dark mode it will help make it for us. 
+  - Using simpleColors will help make the project easier for us in terms of design
+What did you learn from other groups?
+  -Talked to group J 
+  -Making seperate files for each element instead of cramming them all into one, this will help our project be more organized 
+What are your next steps?
+  -Starting to collaborate our ideas and oragnize how we want the project to look.
+  -Looking at banners and headers 
+  -Decide what Icon we would like to do 
+  
 ### Check-in 2
 - 
 - 
