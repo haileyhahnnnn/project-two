@@ -95,8 +95,8 @@ export class LearningCard extends LitElement {
         <slot></slot>
       </div>
     </div>
-    <learning-body></learning-body>
     <learning-banner></learning-banner>
+    <learning-body></learning-body>
     `;
   }
   // HAX specific callback

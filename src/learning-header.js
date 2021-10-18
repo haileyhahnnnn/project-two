@@ -1,9 +1,9 @@
 import { html, css } from 'lit';
 import { SimpleColors } from "@lrnwebcomponents/simple-colors/simple-colors.js";
 
-export class LearningBody extends SimpleColors {
+export class LearningHeader extends SimpleColors {
     static get tag() {
-        return 'learning-body';
+        return 'learning-header';
     }
     constructor () {
         super();
@@ -14,15 +14,13 @@ export class LearningBody extends SimpleColors {
             :host {
                 display: block;
                 background-color: var(--simple-colors-default-theme-accent-1);
-                border: 2px solid red;
-                text-align: center;
-                height: 100px;
+                border: 2px solid green;
             }
             `
         ];
     }
     render() {
-        return html`<div>Body Stuff<slot></slot><div>`;
+        return html`<div>Header Stuff<slot></slot><div>`;
     }
 }
-window.customElements.define(LearningBody.tag, LearningBody);
+window.customElements.define(LearningHeader.tag, LearningHeader);
