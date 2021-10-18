@@ -1,6 +1,7 @@
 // dependencies / things imported
 import { LitElement, html, css } from 'lit';
 import "./learning-body.js";
+import "./learning-banner.js";
 
 // this is the base path to the assets calculated at run time
 // this ensures that assets are shipped correctly when building the demo
@@ -94,6 +95,7 @@ export class LearningCard extends LitElement {
         <slot></slot>
       </div>
     </div>
+    <learning-banner></learning-banner>
     <learning-body></learning-body>
     `;
   }
