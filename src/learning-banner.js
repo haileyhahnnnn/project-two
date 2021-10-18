@@ -7,24 +7,42 @@ export class LearningBanner extends SimpleColors {
     static get tag() {
         return 'learning-banner';
     }
-    constructor () {
-        super();
+
+    static get properties() {
+        return {
+            ...super.properties,
+        };
     }
+
+    constructor() {
+        super();
+        this.accentColor = 'purple';
+    }
+
     static get styles() {
         return [
             css`
             :host {
-                display: block;
+                display: flex;
                 background-color: var(--simple-colors-default-theme-accent-4);
                 border: 2px solid blue;
+
+            }
+
+            learning-icon{
+                width: 15%;
+
+            }
+
+            learning-header{
+                width: 85%;
             }
             `
         ];
     }
     render() {
         return html
-        `
-        <slot></slot>
+            `
         <learning-icon></learning-icon>
         <learning-header></learning-header>
 
