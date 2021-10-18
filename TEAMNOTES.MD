@@ -33,8 +33,11 @@ What are your next steps?
   -Decide what Icon we would like to do 
   
 ### Check-in 2
-- 
-- 
+- we had somewhat of a tough time getting out update() function to work with the <slot> tags 
+- we got a good part of our project done like the different files needed for element 
+- Writing API's to create the icon 
+- writing the CSS for elements 
+- working as a team when we get stuck on specific code on the elements 
 ### Check-in 3
 - 
 - 
