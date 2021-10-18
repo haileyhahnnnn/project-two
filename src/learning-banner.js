@@ -42,10 +42,9 @@ export class LearningBanner extends SimpleColors {
     }
     render() {
         return html
-            `
+        `
         <learning-icon></learning-icon>
         <learning-header></learning-header>
-
         `;
     }
 }
