@@ -38,6 +38,13 @@ What are your next steps?
 - Writing API's to create the icon 
 - writing the CSS for elements 
 - working as a team when we get stuck on specific code on the elements 
+  
+  ### Class Participation Week 9 (10/19)
+  -From the presentation, our group learned that we would be able to utilize his render function in our project
+  -We learned that styling can be used throughout our card to improve the appearance of each section
+  We would be able to manipulate the size of the icon and text based on the size of the window displaying it
+  -Our next steps are to get the web component to change based on states, and impliment the slots to be customizable by the user
+  
 ### Check-in 3
 - 
 - 
