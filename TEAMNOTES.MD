@@ -38,9 +38,21 @@ What are your next steps?
 - Writing API's to create the icon 
 - writing the CSS for elements 
 - working as a team when we get stuck on specific code on the elements 
+  
+  ### Class Participation Week 9 (10/19)
+  -From the presentation, our group learned that we would be able to utilize his render function in our project
+  -We learned that styling can be used throughout our card to improve the appearance of each section
+  We would be able to manipulate the size of the icon and text based on the size of the window displaying it
+  -Our next steps are to get the web component to change based on states, and impliment the slots to be customizable by the user
+  
 ### Check-in 3
-- 
-- 
+- We met in Class on Thursday and Tuesday to work and discuss what we need to do / go over areas we are all having problems in
+- Met Sunday(oct 24th) VIA facetime to talk about problems we are running into and how we are going to go about fixing things/ also asked questions and talked about problems that everyone was running into/ collaborated as a team to solve issues 
+- we have made some progress with adding certian text and smaller changes. More of a syntax error. 
+- as a team we are digging deeper into the bigger changes that need to be made and trying solve the best way to go about it 
+- the problems we are running into right now are more errors with our code that deal with slots
+- out next steps would be to fix the bugs we have in our code. To move further we are going to clean up our code to make it easier to point out the errors are running into. We will continue to work as a group to work on a big chunk of getting the card formatted correctly this week. 
+- We talked about what we want to be done with and created a timeline for our project
 ### Check-in 4
 - 
 Questions In-Class: 

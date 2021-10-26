@@ -5,9 +5,17 @@ export class LearningHeader extends SimpleColors {
     static get tag() {
         return 'learning-header';
     }
+
+    static get properties() {
+        return {
+            ...super.properties,
+        };
+    }
+
     constructor () {
         super();
     }
+    
     static get styles() {
         return [...super.styles,
             css`
@@ -20,7 +28,11 @@ export class LearningHeader extends SimpleColors {
         ];
     }
     render() {
-        return html`<div>Header Stuff<slot></slot><div>`;
+        return html`
+        <div>Header Stuff
+            <slot></slot>
+        <div>
+        `;
     }
 }
 window.customElements.define(LearningHeader.tag, LearningHeader);

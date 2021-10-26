@@ -5,9 +5,17 @@ export class LearningIcon extends SimpleColors {
     static get tag() {
         return 'learning-icon';
     }
+
+    static get properties() {
+        return {
+            ...super.properties,
+        };
+    }
+
     constructor () {
         super();
     }
+    
     static get styles() {
         return [...super.styles,
             css`
