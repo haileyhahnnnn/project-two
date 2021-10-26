@@ -20,7 +20,7 @@ export class LearningBanner extends SimpleColors {
     }
 
     static get styles() {
-        return [
+        return [...super.styles,
             css`
             :host {
                 display: flex;
