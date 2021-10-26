@@ -32,6 +32,7 @@ export class LearningCard extends LitElement {
       // attribute helps us bind the JS spec for variables names to the HTML spec
       // <learning-card my-icon="whatever" will set this.myIcon to "whatever"
       myIcon: { type: String, attribute: "my-icon" },
+      banenrColor: { type: String, attribute: "banner-color" },
     };
   }
   // updated fires every time a property defined above changes
@@ -40,6 +41,15 @@ export class LearningCard extends LitElement {
     changedProperties.forEach((oldValue, propName) => {
       if (propName === "type" && this[propName] === "science") {
         this.myIcon = "beaker";
+        this.bannerColor = "green";
+      }
+      else if (propName === "type" && this[propName] === "idea") {
+        this.myIcon = "lightbulb";
+        this.bannerColor = "yellow";
+      }
+      else if (propName === "type" && this[propName] === "question") {
+        this.myIcon = "question";
+        this.bannerColor = "blue";
       }
     });
   }

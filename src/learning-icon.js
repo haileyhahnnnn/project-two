@@ -15,20 +15,22 @@ export class LearningIcon extends SimpleColors {
     constructor () {
         super();
     }
-    
+
     static get styles() {
         return [...super.styles,
             css`
             :host {
                 display: block;
-                background-color: var(--simple-colors-default-theme-accent-1);
+                background-color: transparent;
                 border: 2px solid orange;
             }
             `
         ];
     }
     render() {
-        return html`<div>Icon Stuff<slot></slot><div>`;
+        return html`
+        <img part="icon" src="${myIcon}" alt=""/>
+        `;
     }
 }
 window.customElements.define(LearningIcon.tag, LearningIcon);
