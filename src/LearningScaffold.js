@@ -1,9 +1,9 @@
 import { html, css } from 'lit';
 import { SimpleColors } from "@lrnwebcomponents/simple-colors/simple-colors.js";
 
-export class LearningHeader extends SimpleColors {
+export class LearningScaffold extends SimpleColors {
     static get tag() {
-        return 'learning-header';
+        return 'learning-scaffold';
     }
 
     static get properties() {
@@ -15,24 +15,28 @@ export class LearningHeader extends SimpleColors {
     constructor () {
         super();
     }
-    
+
     static get styles() {
         return [...super.styles,
             css`
             :host {
                 display: block;
                 background-color: transparent;
-                border: 2px solid green;
+                border: 2px solid orange;
             }
             `
         ];
     }
     render() {
         return html`
-        <div>
-        Header Stuff            
-        <div>
+        <div class="banner">
+            <slot name="banner"></slot>
+        </div>
+        <div class="body">
+            <slot name="body"></slot>
+        </div>
         `;
     }
 }
-window.customElements.define(LearningHeader.tag, LearningHeader);
+
+window.customElements.define(LearningScaffold.tag, LearningScaffold);

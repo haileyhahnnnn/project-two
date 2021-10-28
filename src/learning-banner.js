@@ -11,12 +11,31 @@ export class LearningBanner extends SimpleColors {
     static get properties() {
         return {
             ...super.properties,
+            type: { type: String },
         };
     }
 
     constructor() {
         super();
-        this.accentColor = 'purple';
+        this.accentColor = 'blue';
+        this.type = null;
+    }
+
+    updated(changedProperties) {
+        changedProperties.forEach((oldValue, propName) => {
+            if (propName === "type" && this[propName] === "idea") {
+                this.accentColor = "orange";
+                this.type = 'idea';
+            }
+            else if (propName === "type" && this[propName] === "question") {
+                this.accentColor = "blue";
+                this.type = 'question';
+            }
+            else if (propName === "type" && this[propName] === "science") {
+                this.accentColor = "green";
+                this.type = 'science';
+            }
+        });
     }
 
     static get styles() {
@@ -24,17 +43,31 @@ export class LearningBanner extends SimpleColors {
             css`
             :host {
                 display: flex;
-                background-color: var(--simple-colors-default-theme-accent-4);
+                flex-direction: row;
+                background-color: var(--simple-colors-default-theme-accent-1);
                 border: 2px solid blue;
-
             }
 
-            learning-icon{
+            
+            :host([type='idea']) {
+                background-color: var(--simple-colors-default-theme-accent-5);
+            }
+            :host([type='question']) {
+                background-color: var(--simple-colors-default-theme-accent-7);
+            }
+            :host([type='science']) {
+                background-color: var(--simple-colors-default-theme-accent-7);
+            }
+
+            .banner{ 
+                width: auto;
+            }
+
+            .iconArea{
                 width: 15%;
-
             }
 
-            learning-header{
+            .headerArea{
                 width: 85%;
             }
             `
@@ -43,8 +76,14 @@ export class LearningBanner extends SimpleColors {
     render() {
         return html
         `
-        <learning-icon></learning-icon>
-        <learning-header></learning-header>
+        <div class="banner">
+            <div>
+                <learning-icon type="${this.type}"></learning-icon>
+            </div>
+            <div class="headerArea">
+                <slot name="header"></slot>
+            </div>
+        </div>
         `;
     }
 }

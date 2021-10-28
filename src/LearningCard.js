@@ -2,6 +2,8 @@
 import { LitElement, html, css } from 'lit';
 import "./learning-body.js";
 import "./learning-banner.js";
+import "./learning-icon.js";
+import "./learning-header.js";
 
 // this is the base path to the assets calculated at run time
 // this ensures that assets are shipped correctly when building the demo
@@ -22,17 +24,16 @@ export class LearningCard extends LitElement {
   constructor() {
     super();
     this.myIcon = null;
-    this.type = 'math';
+    this.type = 'science';
   }
   // properties that you wish to use as data in HTML, CSS, and the updated life-cycle
   static get properties() {
     return {
       // reflect allows state changes to the element's property to be leveraged in CSS selectors
       type: { type: String, reflect: true },
-      // attribute helps us bind the JS spec for variables names to the HTML spec
       // <learning-card my-icon="whatever" will set this.myIcon to "whatever"
       myIcon: { type: String, attribute: "my-icon" },
-      banenrColor: { type: String, attribute: "banner-color" },
+      bannerColor: { type: String, attribute: "banner-color" },
     };
   }
   // updated fires every time a property defined above changes
@@ -91,22 +92,22 @@ export class LearningCard extends LitElement {
   // HTML - specific to Lit
   render() {
     return html`
-    <h1>cool</h1>
     <div>${this.type}</div>
     <div>
-      <div class="slot-wrapper" data-label="Header" data-layout-slotname="header">
-        <slot name="header"></slot>
-      </div>
       <img part="icon" src="${beaker}" alt=""/>
-      <img part="icon" src="${lightbulb}" />
+      <img part="icon" src="${lightbulb}" alt=""/>
       <img part="icon" src="${question}" alt=""/>
-      <div class="slot-wrapper" data-label="Content" data-layout-slotname="content">
-        <slot name="content"></slot>
-        <slot></slot>
-      </div>
+      
     </div>
-    <learning-banner></learning-banner>
-    <learning-body></learning-body>
+    <learning-scaffold>
+      <learning-banner slot="banner" type=${this.type}>
+        
+        <learning-header slot="header" type=${this.type}></learning-header>
+      </learning-banner>
+      <learning-body slot="body">
+        <slot></slot>
+      </learning-body>
+    </learning-scaffold>
     `;
   }
   // HAX specific callback

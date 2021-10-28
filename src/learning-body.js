@@ -16,13 +16,14 @@ export class LearningBody extends SimpleColors {
                 background-color: var(--simple-colors-default-theme-accent-1);
                 border: 2px solid red;
                 text-align: center;
-                height: 100px;
+                height: auto;
+                min-height: 50px;
             }
             `
         ];
     }
     render() {
-        return html`<div>Body Stuff<slot></slot><div>`;
+        return html`<div><slot></slot><div>`;
     }
 }
 window.customElements.define(LearningBody.tag, LearningBody);
