@@ -24,7 +24,6 @@ export class LearningCard extends LitElement {
   }
 
   // updated fires every time a property defined above changes
-  // this allows you to react to variables changing and use javascript to perform logic
   updated(changedProperties) {
     changedProperties.forEach((oldValue, propName) => {
       if (propName === 'type' && this[propName] === 'science') {
@@ -69,18 +68,6 @@ export class LearningCard extends LitElement {
       :host {
         display: block;
         width: 600px;
-      }
-
-      /* this is how you match something on the tag itself like <learning-card type="math"> and then style the img inside */
-      :host([type='math']) img {
-        background-color: purple;
-      }
-
-      img {
-        display: inline-flex;
-        height: var(--learning-card-height, 100px);
-        width: var(--learning-card-width, 100px);
-        background-color: green;
       }
 
       ul {

@@ -24,10 +24,11 @@ export class LearningBody extends SimpleColors {
   }
 
   render() {
-    return html`<div>
-      <slot></slot>
-      <div></div>
-    </div>`;
+    return html`
+      <div>
+        <slot></slot>
+      </div>
+    `;
   }
 }
 window.customElements.define(LearningBody.tag, LearningBody);

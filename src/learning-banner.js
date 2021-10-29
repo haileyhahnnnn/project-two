@@ -41,8 +41,6 @@ export class LearningBanner extends SimpleColors {
       css`
         :host {
           display: flex;
-          flex-direction: row;
-          background-color: var(--simple-colors-default-theme-accent-1);
         }
 
         :host([type='idea']) {

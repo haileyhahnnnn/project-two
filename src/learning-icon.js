@@ -39,12 +39,6 @@ export class LearningIcon extends SimpleColors {
           height: var(--i-height, inherit);
           width: var(--i-width, inherit);
         }
-
-        img {
-          display: inline-flex;
-          height: var(--learning-header-height, 100px);
-          width: var(--learning-header-width, 100px);
-        }
       `,
     ];
   }
