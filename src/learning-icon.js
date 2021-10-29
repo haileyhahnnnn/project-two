@@ -36,7 +36,6 @@ export class LearningIcon extends SimpleColors {
         :host {
           display: block;
           background-color: transparent;
-          border: 2px solid orange;
           height: var(--i-height, inherit);
           width: var(--i-width, inherit);
         }

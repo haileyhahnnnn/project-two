@@ -2,38 +2,24 @@
 import { LitElement, html, css } from 'lit';
 import './learning-body.js';
 import './learning-banner.js';
-import './learning-icon.js';
-import './learning-header.js';
 
-// this is the base path to the assets calculated at run time
-// this ensures that assets are shipped correctly when building the demo
-// on github pages, or when people reuse assets outside your elements in production
-// because this won't change we can leverage as an internal variable without being
-// declared in properties. This let's us ship the icons while referencing them correctly
-
-// EXPORT (so make available to other documents that reference this file) a class, that extends LitElement
-// which has the magic life-cycles and developer experience below added
 export class LearningCard extends LitElement {
-  // a convention I enjoy so you can change the tag name in 1 place
   static get tag() {
     return 'learning-card';
   }
 
-  // HTMLElement life-cycle, built in; use this for setting defaults
   constructor() {
     super();
     this.myIcon = null;
     this.type = 'science';
   }
 
-  // properties that you wish to use as data in HTML, CSS, and the updated life-cycle
   static get properties() {
     return {
-      // reflect allows state changes to the element's property to be leveraged in CSS selectors
       type: { type: String, reflect: true },
-      // <learning-card my-icon="whatever" will set this.myIcon to "whatever"
       myIcon: { type: String, attribute: 'my-icon' },
-      bannerColor: { type: String, attribute: 'banner-color' },
+      header: { type: String, reflect: true },
+      subheader: { type: String, reflect: true },
     };
   }
 
@@ -43,13 +29,16 @@ export class LearningCard extends LitElement {
     changedProperties.forEach((oldValue, propName) => {
       if (propName === 'type' && this[propName] === 'science') {
         this.myIcon = 'beaker';
-        this.bannerColor = 'green';
+        this.header = 'UNIT 1';
+        this.subheader = 'CHEM CONNECTION';
       } else if (propName === 'type' && this[propName] === 'idea') {
         this.myIcon = 'lightbulb';
-        this.bannerColor = 'yellow';
+        this.header = 'UNIT 1';
+        this.subheader = 'LEARNING OBJECTIVES';
       } else if (propName === 'type' && this[propName] === 'question') {
         this.myIcon = 'question';
-        this.bannerColor = 'blue';
+        this.header = 'UNIT 1';
+        this.subheader = 'DID YOU KNOW?';
       }
     });
   }
@@ -79,17 +68,40 @@ export class LearningCard extends LitElement {
     return css`
       :host {
         display: block;
-        width: 700px;
+        width: 600px;
       }
+
       /* this is how you match something on the tag itself like <learning-card type="math"> and then style the img inside */
       :host([type='math']) img {
         background-color: purple;
       }
+
       img {
         display: inline-flex;
         height: var(--learning-card-height, 100px);
         width: var(--learning-card-width, 100px);
         background-color: green;
+      }
+
+      ul {
+        padding: 0px;
+      }
+
+      .header {
+        color: white;
+        font-weight: 100;
+        font-size: 30px;
+      }
+
+      .subheader {
+        color: white;
+        font-weight: 500;
+        font-size: 30px;
+      }
+
+      learning-body {
+        border: 1px solid black;
+        border-top: none;
       }
     `;
   }
@@ -99,7 +111,8 @@ export class LearningCard extends LitElement {
     return html`
       <learning-scaffold>
         <learning-banner slot="banner" type=${this.type}>
-          <learning-header slot="header" type=${this.type}></learning-header>
+          <div class="header" slot="header">${this.header}</div>
+          <div class="subheader" slot="subheader">${this.subheader}</div>
         </learning-banner>
         <learning-body slot="body">
           <slot></slot>

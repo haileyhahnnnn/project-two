@@ -1,7 +1,6 @@
 import { html, css } from 'lit';
 import { SimpleColors } from '@lrnwebcomponents/simple-colors/simple-colors.js';
 import './learning-icon.js';
-import './learning-header.js';
 
 export class LearningBanner extends SimpleColors {
   static get tag() {
@@ -44,17 +43,18 @@ export class LearningBanner extends SimpleColors {
           display: flex;
           flex-direction: row;
           background-color: var(--simple-colors-default-theme-accent-1);
-          border: 2px solid blue;
         }
 
         :host([type='idea']) {
-          background-color: var(--simple-colors-default-theme-accent-5);
+          background-color: var(--simple-colors-default-theme-accent-6);
         }
-        :host([type='question']) {
-          background-color: var(--simple-colors-default-theme-accent-7);
-        }
+
         :host([type='science']) {
           background-color: var(--simple-colors-default-theme-accent-7);
+        }
+
+        :host([type='question']) {
+          background-color: var(--simple-colors-default-theme-accent-8);
         }
 
         .banner {
@@ -68,6 +68,7 @@ export class LearningBanner extends SimpleColors {
 
         .headerArea {
           width: 85%;
+          padding-left: 1%;
         }
       `,
     ];
@@ -81,6 +82,7 @@ export class LearningBanner extends SimpleColors {
         </div>
         <div class="headerArea">
           <slot name="header"></slot>
+          <slot name="subheader"></slot>
         </div>
       </div>
     `;
