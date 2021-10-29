@@ -1,6 +1,7 @@
 import { html, css } from 'lit';
+import { SimpleColors } from '@lrnwebcomponents/simple-colors/simple-colors.js';
 
-export class LearningBody {
+export class LearningBody extends SimpleColors {
   static get tag() {
     return 'learning-body';
   }
