@@ -78,6 +78,7 @@ export class LearningCard extends LitElement {
         color: white;
         font-weight: 100;
         font-size: 30px;
+        padding-top: 17px;
       }
 
       .subheader {
@@ -88,7 +89,6 @@ export class LearningCard extends LitElement {
 
       learning-body {
         border: 1px solid black;
-        border-top: none;
       }
     `;
   }
